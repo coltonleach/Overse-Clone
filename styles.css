@@ -18,13 +18,13 @@
   --font-family: 'Inter', sans-serif;
   --gradient-priamry: linear-gradient(
     38deg,
-    rgba(128, 0, 128, 1) 0%,
-    rgba(240, 43, 15, 1) 100%
+    rgb(127, 28, 173) 0%,
+    rgb(248, 120, 81) 100%
   );
   --gradient-secondary: linear-gradient(
     38deg,
-    hsl(290, 69%, 36%) 0%,
-    hsl(342, 60%, 57%) 100%
+    hsl(258, 60%, 57%) 0%,
+    hsl(320, 73%, 61%) 100%
   );
 }
 
@@ -43,7 +43,6 @@ a:visited {
 
 a {
   text-decoration: none;
-  /* color: var(--clr-font-secondary); */
 }
 
 .cursor,
@@ -71,7 +70,7 @@ a {
   transition: all 60ms ease-out;
 }
 
-.btn-primary {
+a.btn-primary {
   font-weight: 700;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
@@ -82,7 +81,7 @@ a {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -92,8 +91,16 @@ a {
   margin: 0 auto;
   padding: 1rem;
   color: var(--clr-font-secondary);
-  background-color: rgba(0, 0, 0, 0.192);
   z-index: 1;
+  background-color: transparent;
+  transition: all 300ms ease;
+}
+
+.header.header-sticky {
+  position: fixed;
+  color: var(--clr-font-primary);
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
 }
 
 .header > #nav-header > a {
@@ -108,7 +115,7 @@ a {
 }
 
 .logo > span {
-  color: purple;
+  color: rgb(185, 73, 250);
 }
 
 .hero {
@@ -119,15 +126,11 @@ a {
   background: var(--gradient-priamry);
   color: var(--clr-font-secondary);
   height: 445px;
+  gap: 1rem;
 }
 
 .hero > h1 {
   font-size: 3rem;
-}
-
-.hero > p {
-  position: relative;
-  top: 100px;
 }
 
 /* SECTIONS */
