@@ -11,3 +11,12 @@ services.forEach((service, i) => {
     service.classList.toggle('active')
   })
 })
+
+const cursor = document.querySelector('.cursor')
+const borderCursor = document.querySelector('.border-cursor')
+window.addEventListener('mousemove', (e) => {
+  cursor.style.top = `${e.clientY}px`
+  cursor.style.left = `${e.clientX}px`
+  borderCursor.style.top = `${e.clientY}px`
+  borderCursor.style.left = `${e.clientX}px`
+})
