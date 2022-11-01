@@ -93,6 +93,7 @@ a {
   padding: 1rem;
   color: var(--clr-font-secondary);
   background-color: rgba(0, 0, 0, 0.192);
+  z-index: 1;
 }
 
 .header > #nav-header > a {
@@ -139,7 +140,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 5rem 19.75rem;
+  margin: 5rem auto;
+  width: 1260px;
 }
 
 .subject-container {
@@ -262,7 +264,8 @@ a {
 .award-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 0 19.75rem;
+  margin: 0 auto;
+  width: 1260px;
 }
 
 .award-card {
