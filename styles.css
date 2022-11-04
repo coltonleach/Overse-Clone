@@ -219,8 +219,6 @@ a.btn-primary {
 
 .service-title {
   position: relative;
-  display: flex;
-  justify-content: space-between;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.03);
   font-weight: 600;
@@ -229,9 +227,19 @@ a.btn-primary {
   cursor: pointer;
 }
 
-.service-title::after {
-  content: '+';
-  font-weight: 200;
+.service-title > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(50% - 20px);
+  right: 1rem;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 300ms cubic-bezier(0.6, 0.19, 0.41, 1.45);
 }
 
 .service-list {
@@ -245,8 +253,8 @@ a.btn-primary {
   max-height: 120px;
 }
 
-.services.active .service-title::after {
-  content: '-';
+.services.active .service-title > i {
+  transform: rotate(-180deg);
 }
 
 .award-section {
