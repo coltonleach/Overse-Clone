@@ -3,6 +3,7 @@ const borderCursor = document.querySelector('.border-cursor')
 const services = document.querySelectorAll('.services')
 const header = document.querySelector('.header')
 
+let mousePosition = { x: 0, y: 0 }
 let titleBtnHovered = false
 
 // services accordion
@@ -42,13 +43,19 @@ services.forEach((service, i) => {
 
 // cursor trail
 window.addEventListener('mousemove', (e) => {
-  if (!titleBtnHovered) {
-    borderCursor.style.top = `${e.clientY}px`
-    borderCursor.style.left = `${e.clientX}px`
-  }
-  cursor.style.top = `${e.clientY}px`
-  cursor.style.left = `${e.clientX}px`
+  mousePosition.x = e.clientX
+  mousePosition.y = e.clientY
+  cursorTrail()
 })
+
+const cursorTrail = () => {
+  if (!titleBtnHovered) {
+    borderCursor.style.top = `${mousePosition.y}px`
+    borderCursor.style.left = `${mousePosition.x}px`
+  }
+  cursor.style.top = `${mousePosition.y}px`
+  cursor.style.left = `${mousePosition.x}px`
+}
 
 // sticky header
 window.onscroll = () => {

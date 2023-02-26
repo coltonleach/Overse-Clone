@@ -335,22 +335,38 @@ a.btn-primary {
   font-weight: 300;
 }
 
+/* Proposal Section */
+
 .proposal-section {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   background-color: #f7f7f7;
-  padding: 5rem 19.75rem;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.proposal-section > .subject-title {
+  width: 1260px;
+  margin: 0 auto;
+}
+
+.proposal-section > .subject {
+  width: 1260px;
+  margin: 0 auto;
 }
 
 .proposal-body {
   line-height: 1.65;
+  width: 1260px;
+  margin: 0 auto;
 }
 
 .proposal-form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto auto;
   gap: 2rem;
+  width: 1260px;
+  margin: 0 auto;
 }
 
 .proposal-form > div {
@@ -370,7 +386,7 @@ a.btn-primary {
   outline: none;
 }
 
-.proposal-form > button {
+.proposal-form > a {
   border: none;
   font-size: 1rem;
   font-family: var(--font-family);
